@@ -1,0 +1,255 @@
+@import "../../styles/variables.scss";
+.layout {
+  width: 80%;
+  margin: auto;
+  padding: 24px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.layoutContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.mainContent {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.pageTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 24px;
+}
+
+.formSection {
+  margin-bottom: 30px;
+}
+
+.paymentOption {
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: $transition;
+
+  &.selected {
+    border-color: #1890ff;
+    background-color: #e6f7ff;
+  }
+}
+
+.selected {
+  border-color: #000;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primaryButton {
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: 500;
+  transition: $transition;
+  min-width: 120px;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+.secondaryButton {
+  background-color: $secondary-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 24px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: 500;
+  transition: $transition;
+  min-width: 120px;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($secondary-color, 5%);
+  }
+}
+
+:global(.ant-radio-wrapper) {
+  width: 100%;
+  margin-right: 0;
+}
+
+:global(.ant-radio-checked .ant-radio-inner) {
+  border-color: $color-primary;
+
+  // &::after {
+  //   background-color: $color-primary;
+  // }
+}
+
+:global(.ant-form-item) {
+  margin-bottom: 16px;
+}
+
+.qrImageContainer {
+  width: 100%;
+  margin: auto;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+
+  .qrImage {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.qrWrapper {
+  position: relative;
+}
+
+.qrImageContainer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.qrImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+.qrBlurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.qrOverlay {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 12px 16px;
+  // border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+}
+
+.timerText {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.timeLeft {
+  color: #43a047;
+}
+
+.timeOut {
+  color: #e53935;
+}
+
+.formItem {
+  width: 100%;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a1a1a1;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #1890ff;
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+      outline: none;
+    }
+  }
+}
+
+.borderedRow {
+  border: 1px solid #d9d9d9;
+  padding: 16px;
+  border-radius: 8px;
+  min-height: 500px;
+
+  .lineCenter {
+    width: 1.2px !important;
+    background-color: #d9d9d9;
+  }
+}
+
+// .borderedCol {
+//   border: 1px dashed #999;
+//   padding: 12px;
+//   border-radius: 4px;
+// }
+
+// .leftCol {
+//   border-right: 1px solid #e0e0e0;
+// }
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    max-width: 400px;
+  }
+}
