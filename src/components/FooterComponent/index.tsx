@@ -23,7 +23,7 @@ const Footer = () => {
         <div className={cx("footer-container")}>
           {/* Brand information */}
           <div className={cx("brand-section")}>
-            <h2 className={cx("brand-name")}>PINKY CLOTHING</h2>
+            <h2 className={cx("brand-name")}>TrendX CLOTHING</h2>
             <p className={cx("brand-description")}>
               We have clothes that suits your style and which you're proud to
               wear. From women to men.
@@ -125,7 +125,7 @@ const Footer = () => {
           <div className={cx("footer-container-payment")}>
             <div className={cx("footer-bottom-content")}>
               <p className={cx("copyright")}>
-                PinkyClothing © 2025, All Rights Reserved
+                TrendXClothing © 2025, All Rights Reserved
               </p>
 
               <div className={cx("payment-methods")}>
