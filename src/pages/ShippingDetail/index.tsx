@@ -275,7 +275,7 @@ const ShippingDetails: React.FC = () => {
                       className={styles.formItem}
                     >
                       <Input
-                        placeholder="Vu Thi Huong"
+                        placeholder="Lê Thị Ngọc Ánh"
                         disabled={isInputDisabled}
                       />
                     </Form.Item>
